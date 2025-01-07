@@ -49,7 +49,7 @@ const EditBookPage = () => {
         try {  
             await API.put(`/books/${id}`, book);  
             alert("Book updated successfully!");  
-            navigate("/");  
+            navigate("/book");  
         } catch (error) {  
             console.error("Error updating book:", error);  
             alert("Failed to update book. Please try again.");  
@@ -117,7 +117,7 @@ const EditBookPage = () => {
                 <button  
                     type="button"  
                     className="btn btn-secondary ms-2"  
-                    onClick={() => navigate("/")}  
+                    onClick={() => navigate("/book")}  
                 >  
                     Cancel  
                 </button>  

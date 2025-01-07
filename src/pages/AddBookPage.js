@@ -32,7 +32,7 @@ const AddBookPage = () => {
         try {  
             await API.post("/books", newBook); 
             alert("Book added successfully!");  
-            navigate("/");  
+            navigate("/book");  
         } catch (error) {  
             console.error("Error adding book:", error);  
             alert("Failed to add book. Please try again.");  
@@ -110,7 +110,7 @@ const AddBookPage = () => {
                         <button  
                             type="button"  
                             className="btn btn-secondary"  
-                            onClick={() => navigate("/")}  
+                            onClick={() => navigate("/book")}  
                         >  
                             Cancel  
                         </button>  
